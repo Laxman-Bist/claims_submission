@@ -7,7 +7,7 @@ from src.claim_submission import submit_claim, get_next_claim_id
 def test_submit_claim():
     # Backup the existing claims file (if it exists)
     backup_file = None
-    if os.path.exists("data/claims.csv"):
+    if os.path.exists("/claims.csv"):
         with open("data/claims.csv", "r") as file:
             backup_file = file.read()
 
@@ -32,3 +32,4 @@ def test_submit_claim():
             file.write(backup_file)
     else:
         os.remove("data/claims.csv")  # Delete the file if it didn't exist before
+
