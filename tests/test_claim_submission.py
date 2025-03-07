@@ -23,7 +23,7 @@ def test_submit_claim():
         expected_id = str(len(claims))  # claim_id should match the row count
         assert last_claim["claim_id"] == expected_id
         assert last_claim["policy_number"] == "POL123"
-        assert last_claim["claim_amount"] == 1000.0
+        assert last_claim["claim_amount"] == "1000.0"
         assert last_claim["status"] == "Submitted"
 
     # Clean up: Restore the original claims file
